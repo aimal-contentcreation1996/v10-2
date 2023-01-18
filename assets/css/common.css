@@ -429,7 +429,7 @@ nav select {
 
 .mob-mode li .button {
     position: absolute;
-    bottom: 100px;
+    bottom: 200px;
     left: 0;
     height: 40px;
 }
