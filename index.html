@@ -20,6 +20,11 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <title>FIT</title>
 </head>
+<style>
+    .rotate {
+        transform: rotate(90deg);
+    }
+</style>
 
 <body class="fit">
     <!-- Nav 1 -->
@@ -29,13 +34,21 @@
             <a class="navbar-brand" href="Home.html">
                 <img src="assets/images/logo.svg" alt="" />
             </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa fa-sliders-h"></i>
+            <form class="form-inline d-lg-none d-md-none d-flex">
+                <select id="inputState" class="form-control pl-0">
+                    <option selected>CYBERJAYA</option>
+                    <option>CYBERJAYA</option>
+                </select>
+            </form>
+            <button class="navbar-toggler hamburger mr-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <i class="fa fa-sliders-h"></i> -->
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
             </button>
 
             <div class="collapse navbar-collapse text-xl-block text-center" id="navbarSupportedContent">
-                <form class="form-inline my-2 my-lg-0">
+                <form class="form-inline my-2 my-lg-0 d-lg-flex d-none">
                     <select id="inputState" class="form-control mr-3">
                         <option selected>CYBERJAYA</option>
                         <option>CYBERJAYA</option>
@@ -45,7 +58,7 @@
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
                     </div>
                 </form>
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto d-lg-flex d-md-flex d-none">
                     <li class="nav-item ">
                         <a class="nav-link nav-link2 " href="updates.html" target="_blank">
                             UPDATES
@@ -186,6 +199,57 @@
                         </div>
                     </li>
                     <li class="nav-item">
+                        <a class="button" href="#!">ENROLL NOW</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto text-left pl-2 pr-2 mob-mode d-lg-none d-md-none d-flex">
+                    <li class="nav-item ">
+                        <a class="nav-link " href="updates.html" target="_blank">
+                        UPDATES
+                        </a>
+                    </li>
+                    <div class="divider"></div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link d-flex justify-content-between" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ABOUT <i class="fas fa-angle-right"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">WHY LIMKOKWING</a>
+                            <a class="dropdown-item" href="#">Heritage</a>
+                            <a class="dropdown-item" href="#">ACCREDIATION & AWARDS</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link d-flex justify-content-between" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            academia <i class="fas fa-angle-right"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">WHY LIMKOKWING</a>
+                            <a class="dropdown-item" href="#">Heritage</a>
+                            <a class="dropdown-item" href="#">ACCREDIATION & AWARDS</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link d-flex justify-content-between" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Business <i class="fas fa-angle-right"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">WHY LIMKOKWING</a>
+                            <a class="dropdown-item" href="#">Heritage</a>
+                            <a class="dropdown-item" href="#">ACCREDIATION & AWARDS</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link d-flex justify-content-between" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Experience <i class="fas fa-angle-right"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">WHY LIMKOKWING</a>
+                            <a class="dropdown-item" href="#">Heritage</a>
+                            <a class="dropdown-item" href="#">ACCREDIATION & AWARDS</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mt-5 pt-5 text-center">
                         <a class="button" href="#!">ENROLL NOW</a>
                     </li>
                 </ul>
@@ -761,7 +825,14 @@
         })
         $('.fit-1').mouseleave(function() {
             $(this).attr('src', src1);
+        });
+        $('.mob-mode .nav-link').click(function() {
+            $('.fa-angle-right').toggleClass('rotate');
         })
+        $('.hamburger').on('click', function() {
+            $(this).toggleClass('active');
+        });
+
     });
     var swiper = new Swiper(".mySwiper", {
         spaceBetween: 30,
@@ -770,5 +841,6 @@
         },
     });
 </script>
+
 
 </html>

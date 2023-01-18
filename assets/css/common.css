@@ -332,3 +332,104 @@ nav select {
 .text-black {
     color: #000000 !important;
 }
+
+.mob-mode {
+    height: 100vh;
+    position: relative;
+}
+
+.mob-mode .fa-angle-right {
+    font-size: 1.3rem;
+    margin-top: -1px;
+    color: #7C7C7C;
+}
+
+.mob-mode .nav-link {
+    text-transform: uppercase;
+}
+
+.mob-mode .nav-item {
+    padding: 10px 0;
+    font-size: 1.25rem;
+}
+
+.mob-mode .dropdown-menu.show {
+    display: block !important;
+    transition: 0.5s all ease-in-out;
+    -webkit-transition: 0.5s all ease-in-out;
+    -moz-transition: 0.5s all ease-in-out;
+    -ms-transition: 0.5s all ease-in-out;
+    -o-transition: 0.5s all ease-in-out;
+}
+
+.mob-mode .dropdown-menu {
+    width: 100%;
+    border: none !important;
+    padding: 0;
+    margin: 0;
+    transition: 0.5s all ease-in-out;
+    -webkit-transition: 0.5s all ease-in-out;
+    -moz-transition: 0.5s all ease-in-out;
+    -ms-transition: 0.5s all ease-in-out;
+    -o-transition: 0.5s all ease-in-out;
+    background-color: transparent;
+}
+
+.mob-mode .dropdown-item {
+    margin: 0;
+    padding: 10px 0;
+    color: #7c7c7c;
+    text-transform: uppercase;
+    list-style-type: disc;
+}
+
+.mob-mode .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #7c7c7c;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+
+.hamburger.active .line:nth-of-type(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 12px;
+}
+
+.hamburger.active .line:nth-of-type(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-of-type(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -9px;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+.mob-mode li .button {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    height: 40px;
+}

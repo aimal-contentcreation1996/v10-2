@@ -19,6 +19,9 @@
          .fit .explore-f .box-4 {
              height: 560px !important;
          } */
+         .fit .str-5 .img-height {
+             margin-top: 100px;
+         }
      }
      
      @media only screen and (min-width: 1880px) {
@@ -2068,6 +2071,19 @@
      }
      
      @media only screen and (max-width: 767.5px) {
+         .fit nav .form-inline select {
+             background-color: transparent !important;
+             color: #7c7c7c !important;
+         }
+         .fit .fa-sliders-h {
+             color: #000;
+         }
+         .navbar-brand {
+             margin: 0;
+         }
+         nav .form-inline select {
+             width: auto !important;
+         }
          .fit .ready-start .box .dark {
              width: 70%;
          }
@@ -2441,6 +2457,9 @@
      /* 600 */
      
      @media only screen and (max-width: 600px) {
+         .navbar {
+             padding: 10px;
+         }
          .fit .explore-f .box-1-1 {
              height: 300px;
          }
